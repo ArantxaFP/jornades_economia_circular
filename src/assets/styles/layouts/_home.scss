@@ -39,19 +39,86 @@ body {
   }
 }
 
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: $uoc-corporate;
-
-  @media (min-width: $mqMinWidth) {
-    font-size: 36px;
-  }
-}
 
 .uoc-footer {
   margin-top: 1.5rem;
   font-size: 0.75rem;
   text-align: center;
 }
+
+
+@layer layout {
+  .poster {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 2rem;
+    padding: 2rem;
+    text-align: center;
+    background: linear-gradient(to bottom right, #f1fdff, #aae8f0);
+    min-height: 100dvh;
+    font-family: var(--bs-font-sans-serif);
+
+    &__hero {
+      .poster__title {
+        font-size: clamp(2.5rem, 6vw, 5rem);
+        color: var(--bs-primary);
+        margin-bottom: 0.5rem;
+        font-family: $font-family-serif;
+        font-weight: 700;
+
+        @media (min-width: $mqMinWidth) {
+          font-size: 36px;
+        }
+
+      }
+
+
+      .poster__subtitle {
+        font-size: 1.5rem;
+        color: var(--bs-secondary);
+      }
+    }
+
+    &__info {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    &__nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+
+      .poster__nav-link {
+        text-decoration: none;
+        padding: 1rem 2rem;
+        background-color: var(--bs-primary);
+        color: white;
+        border-radius: 0.5rem;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: var(--bs-secondary);
+        }
+      }
+    }
+  }
+
+  // Fallback per navegadors que no suportin Grid
+  @supports not (display: grid) {
+    .poster {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  // Responsivitat pel poster
+  @media (max-width: 600px) {
+    .poster__nav {
+      flex-direction: column;
+    }
+  }
+}
+
+

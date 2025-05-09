@@ -1,38 +1,52 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>Jornades d’Economia Circular</title>
-  </head>
-  <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-        <main class="poster">
-        <section class="poster__hero">
-          <h1 class="poster__title">Jornades d’Economia Circular</h1>
-          <p class="poster__subtitle">Construint un futur sostenible</p>
-        </section>
-  
-        <section class="poster__info">
-          <p><strong>📍 Lloc:</strong> Centre Cultural Municipal</p>
-          <p><strong>📅 Dates:</strong> 12 i 13 de juny</p>
-          <p><strong>💬 Activitats:</strong> Xerrades · Tallers · Cursos</p>
-        </section>
-  
-        <nav class="poster__nav">
-          <a class="poster__nav-link" href="./pages/participants.html">Ponents</a>
-          <a class="poster__nav-link" href="./pages/article.html">Article</a>
-          <a class="poster__nav-link" href="./pages/lliure.html">Contacte</a>
-        </nav>
-      </main>
-    </div>
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+  <title>Jornades d’Economia Circular</title>
+</head>
+
+<body>
+ 
+  <include src="./views/header-home.html"></include>
+
+
+
+  <div class="uoc-container">
+
+    <main class="poster">
+
+      <header class="poster__hero">
+        <h1 class="poster__title">Jornades d'Economia Circular</h1>
+        <p class="poster__subtitle">12 i 13 de juny - Ajuntament de Barcelona</p>
+        <p class="poster__subtitle">Construint un futur sostenible</p>
+      </header>
+
+      <section class="poster__info">
+        <p>Un espai per reflexionar, aprendre i col·laborar sobre models econòmics sostenibles.</p>
+        <p>Amb ponències, tallers i activitats per a tots els públics interessats en el futur del planeta.</p>
+      </section>
+
+      <section class="poster__info">
+        <p><strong>Lloc:</strong>Centre Cultural Municipal</p>
+        <p><strong>Dates:</strong>12 i 13 de juny</p>
+        <p><strong>Activitats:</strong>Xerrades · Tallers · Cursos</p>
+      </section>
+
+
+    
+    </main>
+
+
+
+
+
+  </div>
+  <include src="./views/footer.html"></include>
+  <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+</body>
+
 </html>

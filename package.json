@@ -43,5 +43,8 @@
     "posthtml-include": "^2.0.1",
     "rimraf": "^6.0.1",
     "sharp": "^0.33.5"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.6"
   }
 }

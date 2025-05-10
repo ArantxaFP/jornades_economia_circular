@@ -11,6 +11,7 @@
     min-height: 100dvh;
     text-align: center;
     background: linear-gradient(to bottom right, $poster-bg-start, $poster-bg-end);
+    padding-top: to-rem(0); 
 
     @supports not (display: grid) {
       display: flex;

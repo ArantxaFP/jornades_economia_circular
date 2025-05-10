@@ -1,18 +1,27 @@
 @layer components {
-  .uoc-header {
-    padding: to-rem(16) to-rem(32); 
-    z-index: 1000;
+  body.home .uoc-header {
+    position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 9999;
+background-color: transparent;
 
-    // Fons segons la classe al body per home o per la resta
-    body.home & {
-      background-color: transparent;
-      border-bottom: none;
-    }
+  }
 
-    body.pages & {
+
+
+  body.pages {
+    .uoc-header {
+      position: static;
       background-color: #ffffff;
       border-bottom: to-rem(1) solid #dee2e6;
     }
+  }
+
+  .uoc-header {
+    padding: to-rem(16) to-rem(32);
+    width: 100%;
 
     .navbar-brand img {
       max-width: to-rem(120);
@@ -22,7 +31,7 @@
     .nav-link {
       font-family: var(--bs-font-sans-serif);
       font-weight: 600;
-      font-size: to-rem(16); // 1rem
+      font-size: to-rem(16);
       color: var(--bs-primary);
       text-decoration: none;
       transition: color 0.3s;
@@ -38,7 +47,6 @@
       }
     }
 
-    // Responsiu en columnes
     @media (max-width: 768px) {
       .navbar-nav {
         flex-direction: column !important;

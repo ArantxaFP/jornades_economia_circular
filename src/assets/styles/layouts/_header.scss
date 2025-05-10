@@ -1,6 +1,6 @@
 @layer components {
   .uoc-header {
-    padding: 1rem 2rem;
+    padding: to-rem(16) to-rem(32); 
     z-index: 1000;
 
     // Fons segons la classe al body per home o per la resta
@@ -11,20 +11,20 @@
 
     body.pages & {
       background-color: #ffffff;
-      border-bottom: 1px solid #dee2e6;
+      border-bottom: to-rem(1) solid #dee2e6;
     }
 
     .navbar-brand img {
-      max-width: 120px;
+      max-width: to-rem(120);
       height: auto;
     }
 
     .nav-link {
       font-family: var(--bs-font-sans-serif);
       font-weight: 600;
-      font-size: 1rem;
+      font-size: to-rem(16); // 1rem
       color: var(--bs-primary);
-      text-decoration: none; 
+      text-decoration: none;
       transition: color 0.3s;
 
       &:hover,
@@ -32,7 +32,7 @@
         color: var(--bs-secondary);
       }
 
-           &:is([href*="index"], [href*="home"]) {
+      &:is([href*="index"], [href*="home"]) {
         font-weight: 700;
         text-decoration: none;
       }

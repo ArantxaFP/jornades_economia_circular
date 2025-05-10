@@ -9,7 +9,6 @@
     grid-template-rows: auto auto 1fr auto;
     gap: to-rem(20);
     min-height: 100dvh;
-    padding: to-rem(32);
     text-align: center;
     background: linear-gradient(to bottom right, $poster-bg-start, $poster-bg-end);
 
@@ -21,19 +20,54 @@
 
     &__hero {
       grid-area: hero;
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+      .poster__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+      }
+
+      .poster__title,
+      .poster__subtitle {
+        position: relative;
+        z-index: 1;
+        color: white;
+        text-shadow: 0 0 to-rem(4) rgba(0, 0, 0, 0.7);
+      }
 
       .poster__title {
         font-size: clamp(to-rem(32), 6vw, to-rem(80));
-        color: var(--bs-primary);
         font-family: $font-family-serif;
         font-weight: bold;
         margin-bottom: to-rem(16);
+        color: white;
       }
 
       .poster__subtitle {
         font-size: to-rem(20);
-        color: var(--bs-secondary);
         margin: 0;
+      }
+
+      @container (max-width: 600px) {
+        .poster__title {
+          font-size: to-rem(40);
+        }
+
+        .poster__subtitle {
+          font-size: to-rem(16);
+        }
       }
     }
 

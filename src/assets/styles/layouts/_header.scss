@@ -1,22 +1,17 @@
 @layer components {
   body.home .uoc-header {
     position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-z-index: 9999;
-background-color: transparent;
-
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: transparent;
   }
 
-
-
-  body.pages {
-    .uoc-header {
-      position: static;
-      background-color: #ffffff;
-      border-bottom: to-rem(1) solid #dee2e6;
-    }
+  body.pages .uoc-header {
+    position: static;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dee2e6;
   }
 
   .uoc-header {
@@ -47,7 +42,7 @@ background-color: transparent;
       }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: to-rem(768)) {
       .navbar-nav {
         flex-direction: column !important;
         align-items: flex-end;

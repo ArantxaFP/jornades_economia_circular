@@ -1,8 +1,8 @@
 @layer components {
   .uoc-footer {
-    border-top: to-rem(2) solid #e0ecf5;
+    border-top: 0.125rem solid #e0ecf5; 
     background-color: #fff;
-    font-size: to-rem(14.4); 
+    font-size: 0.9rem; 
 
     a.nav-link {
       color: var(--bs-primary);
@@ -20,7 +20,7 @@
     }
 
     .bi {
-      font-size: to-rem(19.2); 
+      font-size: 1.2rem; 
     }
   }
 }

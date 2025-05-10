@@ -11,4 +11,8 @@ $uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
 
 $mqMinWidth: 420px;
 
-
+/*variables header*/
+$header-bg-home: transparent;
+$header-bg-pages: #ffffff;
+$header-link-color: var(--bs-primary);
+$header-link-hover: var(--bs-secondary);

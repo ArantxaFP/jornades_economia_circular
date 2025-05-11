@@ -1,75 +1,121 @@
 @layer pages {
-  .article {
-    max-width: to-rem(960);
-    margin: 0 auto;
-    padding: to-rem(32) to-rem(16);
-
-    &__header {
-      text-align: center;
-      margin-bottom: to-rem(32);
-    }
-
-    &__title {
-      font-size: clamp(to-rem(32), 5vw, to-rem(48));
-      font-family: $font-family-serif;
-      color: var(--bs-primary);
-    }
-
-    &__author {
-      color: var(--bs-secondary);
-      font-size: to-rem(14);
-    }
-
-    &__content {
-      display: flex;
-      flex-direction: column;
-      gap: to-rem(24);
-
-      p {
-        line-height: 1.6;
-        font-size: to-rem(16);
-        color: #333;
-      }
-
-      img {
-        width: 100%;
-        height: auto;
-        border-radius: to-rem(8);
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      }
-
-      blockquote {
-        font-style: italic;
-        background-color: $uoc-bg;
-        border-left: to-rem(4) solid $uoc-corporate;
-        padding: to-rem(16);
-        margin: 0;
-        color: $uoc-corporate;
-      }
-
-      ul:is(.article__content > ul) {
-        list-style-type: decimal;
-        padding-left: to-rem(24);
-
-        li {
-          margin-bottom: to-rem(8);
-          font-size: to-rem(14);
+    .article {
+      max-width: to-rem(960);
+      margin: 0 auto;
+      padding: to-rem(32) to-rem(16);
+  
+      &__header {
+        position: relative;
+        width: 100vw;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        height: 50vh;
+        min-height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        margin-bottom: to-rem(32);
+  
+        @container (max-width: 768px) {
+          height: 40vh;
+        }
+  
+        .article__image {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+  
+        .article__overlay {
+          position: relative;
+          background: linear-gradient(
+            to right,
+            rgba($uoc-masterbrand, 0.6) 0%,
+            rgba($uoc-masterbrand, 0.9) 50%,
+            rgba($uoc-masterbrand, 0.6) 100%
+          );
+          padding: to-rem(24) to-rem(32);
+          border-radius: to-rem(12);
+          text-align: center;
+          box-shadow: 0 0 to-rem(10) rgba(0, 0, 0, 0.3);
+  
+          @container (max-width: 768px) {
+            padding: to-rem(16) to-rem(24);
+          }
+  
+          .article__title {
+            color: $uoc-corporate;
+            font-size: clamp(to-rem(24), 5vw, to-rem(48));
+            font-weight: 700;
+            margin: 0 0 to-rem(8) 0;
+          }
+  
+          .article__author {
+            color: $uoc-corporate;
+            font-size: to-rem(16);
+            font-weight: 600;
+            margin: 0;
+          }
         }
       }
-
-      // utilitzo :has() per seleccionar articles amb imatge gran
-      &:has(img[src*="img1"]) {
-        border: to-rem(2) dashed $uoc-corporate;
-        padding: to-rem(24);
+  
+      &__content {
+        display: flex;
+        flex-direction: column;
+        gap: to-rem(24);
+  
+        p {
+          line-height: 1.6;
+          font-size: to-rem(16);
+          color: #333;
+        }
+  
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: to-rem(8);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+  
+        blockquote {
+          font-style: italic;
+          background-color: $uoc-bg;
+          border-left: to-rem(4) solid $uoc-corporate;
+          padding: to-rem(16);
+          margin: 0;
+          color: $uoc-corporate;
+        }
+  
+        ul:is(.article__content > ul) {
+          list-style-type: decimal;
+          padding-left: to-rem(24);
+  
+          li {
+            margin-bottom: to-rem(8);
+            font-size: to-rem(14);
+          }
+        }
+  
+        // utilitzo :has() per seleccionar articles amb imatge gran
+        &:has(img[src*="img1"]) {
+          border: to-rem(2) dashed $uoc-corporate;
+          padding: to-rem(24);
+        }
       }
-    }
-
-    @container (max-width: 600px) {
-      padding: to-rem(16);
-
-      &__title {
-        font-size: to-rem(32);
+  
+      @container (max-width: 600px) {
+        padding: to-rem(16);
+  
+        &__title {
+          font-size: to-rem(32);
+        }
       }
     }
   }
-}
+  

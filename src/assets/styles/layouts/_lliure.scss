@@ -1,89 +1,87 @@
 @layer pages {
-    .contact-header {
-      background: url("../images/contact-header.webp") center/cover no-repeat;
-      height: 60lvh;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-  
-      @container (max-width: 768px) {
-        height: 40lvh;
-      }
+  .contact-header {
+    background: url("../images/contact-header.webp") center/cover no-repeat;
+    height: 60lvh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 2px 4px rgb(0 0 0 / 60%);
+
+    @container (width < 768px) {
+      height: 40lvh;
     }
-  
-    form {
-      background-color: color(display-p3 0.95 0.98 1);
-      padding: to-rem(32);
-      border-radius: to-rem(12);
-      box-shadow: 0 0 to-rem(10) rgba(0, 0, 0, 0.1);
-  
-      @container (max-width: 768px) {
-        padding: to-rem(16);
-      }
-  
-      .form-label {
-        color: $uoc-corporate;
-      }
-  
-      .btn {
-        background-color: $uoc-corporate;
-        border: none;
-  
-        &:hover {
-          background-color: $uoc-masterbrand;
-        }
-      }
+  }
+
+  form {
+    background-color: rgb(242 250 255);
+    padding: to-rem(32);
+    border-radius: to-rem(12);
+    box-shadow: 0 0 to-rem(10) rgb(0 0 0 / 10%);
+
+    @container (width < 768px) {
+      padding: to-rem(16);
     }
-  
-    .memory-game {
-      text-align: center;
-  
-      .game-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: to-rem(16);
-      }
-  
-      .card {
-        background-color: hwb(240 20% 30%);
-        color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        font-size: clamp(0.8rem, 2svw, 1rem);
-        width: 10svh;
-        height: 10svh;
-        border-radius: to-rem(12);
-        box-shadow: 0 0 to-rem(4) rgba(0, 0, 0, 0.2);
-        cursor: pointer;
-        user-select: none;
-        transition: transform 0.3s ease;
-  
-        &:hover {
-          transform: scale(1.1);
-          background-color: display-p3(0.4 0.6 1);
-        }
-  
-        &.matched {
-          background-color: display-p3(0.2 0.8 0.4);
-          color: #000;
-          cursor: default;
-          pointer-events: none;
-          transform: scale(1);
-        }
-      }
-  
-      
-      @media (max-width: 600px) {
-        .card {
-          font-size: to-rem(14);
-          width: 12svh;
-          height: 12svh;
-        }
+
+    .form-label {
+      color: $uoc-corporate;
+    }
+
+    .btn {
+      background-color: $uoc-corporate;
+      border: none;
+
+      &:hover {
+        background-color: $uoc-masterbrand;
       }
     }
   }
-  
+
+  .memory-game {
+    text-align: center;
+
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: to-rem(16);
+    }
+
+    .card {
+      background-color: hwb(240deg 20% 30%);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: clamp(0.8rem, 2svw, 1rem);
+      width: 10svh;
+      height: 10svh;
+      border-radius: to-rem(12);
+      box-shadow: 0 0 to-rem(4) rgb(0 0 0 / 20%);
+      cursor: pointer;
+      user-select: none;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+        background-color: rgb(102 153 255); 
+      }
+
+      &.matched {
+        background-color: rgb(51 204 102); 
+        color: #000;
+        cursor: default;
+        pointer-events: none;
+        transform: scale(1);
+      }
+    }
+
+    @media (width < 600px) {
+      .card {
+        font-size: to-rem(14);
+        width: 12svh;
+        height: 12svh;
+      }
+    }
+  }
+}

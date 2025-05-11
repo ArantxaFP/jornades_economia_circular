@@ -14,23 +14,23 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
 
-      // 1 per fila per defecte (mobile first)
+      // 1 per fila (mobile first)
       flex: 0 1 calc(100% - to-rem(24));
 
-      // Per tablet (2 per fila)
-      @media (min-width: 576px) {
+      // Tablet
+      @container (width >= 576px) {
         flex: 0 1 calc(50% - to-rem(24));
       }
 
-      // Per desktop (3 per fila)
-      @media (min-width: 992px) {
+      // Desktop
+      @container (width >= 992px) {
         flex: 0 1 calc(33.333% - to-rem(24));
       }
 
-      // Per desktop gran (4 per fila)
-      @media (min-width: 1200px) {
+      // Desktio més gran
+      @container (width >= 1200px) {
         flex: 0 1 calc(25% - to-rem(24));
       }
 
@@ -55,11 +55,10 @@
 
       &-tema {
         font-size: to-rem(14);
-        color: $uoc-corporate;    
+        color: $uoc-corporate;
         margin-top: to-rem(8);
         font-weight: 600;
       }
-
     }
   }
 }

@@ -1,54 +1,97 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
 
-    <title>Jornades d’Economia Circular</title>
-  </head>
-  <body class="pages">
-  
-    <include src="./views/header.html"></include>
+  <title>Jornades d’Economia Circular</title>
+</head>
 
-    <div class="uoc-container">
+<body class="pages">
 
-      <main class="poster">
-  
-        <header class="poster__hero">
-          <h1 class="poster__title">Jornades d'Economia Circular</h1>
-          <p class="poster__subtitle">12 i 13 de juny - Ajuntament de Barcelona</p>
-          <p class="poster__subtitle">Construint un futur sostenible</p>
-        </header>
-  
-        <section class="poster__info">
-          <p>Un espai per reflexionar, aprendre i col·laborar sobre models econòmics sostenibles.</p>
-          <p>Amb ponències, tallers i activitats per a tots els públics interessats en el futur del planeta.</p>
-        </section>
-  
-        <section class="poster__info">
-          <p><strong>Lloc:</strong>Centre Cultural Municipal</p>
-          <p><strong>Dates:</strong>12 i 13 de juny</p>
-          <p><strong>Activitats:</strong>Xerrades · Tallers · Cursos</p>
-        </section>
-  
-  
-      
-      </main>
-  
-  
-  
-  
-  
-    </div>
-    
+  <include src="./views/header.html"></include>
 
-    <include src="./views/footer.html"></include>
-   
-    <script type="module" src="./assets/scripts/main.js"></script>
+  <div class="uoc-container">
 
-  </body>
+    <main class="poster">
+
+      <section class="participants">
+
+        <div class="participants__card">
+          <img src="./assets/images/participant_1.png" alt="Dra. Isabel Moreno">
+          <div class="participants__card-name">Dra. Isabel Moreno</div>
+          <div class="participants__card-desc">Directora d’Innovació Sostenible a EcoCircular Labs. Referent
+            internacional en models de negoci basats en l’economia circular i la reducció de residus industrials.</div>
+          <div class="participants__card-tema">Xerrada: Models empresarials innovadors en economia circular.</div>
+        </div>
+
+        <div class="participants__card">
+          <img src="./assets/images/participant_2.png" alt="Carla Jiménez">
+          <div class="participants__card-name">Carla Jiménez</div>
+          <div class="participants__card-desc">CEO de ReVive Textiles, startup líder en reciclatge tèxtil a Europa.
+            Defensora activa de l’economia regenerativa i la reutilització de materials.</div>
+          <div class="participants__card-tema">Xerrada: El futur del reciclatge tèxtil i la moda circular.</div>
+        </div>
+
+        <div class="participants__card">
+          <img src="./assets/images/participant_3.png" alt="Prof. Elena Duarte">
+          <div class="participants__card-name">Prof. Elena Duarte</div>
+          <div class="participants__card-desc">Catedràtica d’Economia Ambiental a la Universitat Politècnica de
+            Barcelona. Autora de més de 30 estudis sobre circularitat en cadenes de subministrament.</div>
+          <div class="participants__card-tema">Xerrada: Circularitat en les cadenes de subministrament globals.</div>
+        </div>
+
+        <div class="participants__card">
+          <img src="./assets/images/participant_4.png" alt="Dra. El-Sayed">
+          <div class="participants__card-name">Dra. El-Sayed</div>
+          <div class="participants__card-desc">Consultora a l’ONU per a estratègies de desenvolupament sostenible.
+            Experta en polítiques públiques per a la implementació de l’economia circular a escala global.</div>
+          <div class="participants__card-tema">Xerrada: Polítiques públiques internacionals per una economia circular.
+          </div>
+        </div>
+
+        <div class="participants__card">
+          <img src="./assets/images/participant_5.png" alt="María González">
+          <div class="participants__card-name">María González</div>
+          <div class="participants__card-desc">Fundadora de GreenLoop, plataforma digital que connecta empreses per a la
+            reutilització de materials industrials. Reconeguda com una de les “Top 100 Women in Sustainability”.</div>
+          <div class="participants__card-tema">Xerrada: Com crear xarxes de col·laboració per a la reutilització
+            industrial.</div>
+        </div>
+
+        <div class="participants__card">
+          <img src="./assets/images/participant_6.png" alt="Jana Lefèvre">
+          <div class="participants__card-name">Jana Lefèvre</div>
+          <div class="participants__card-desc">Directora de Projectes d’Economia Circular a Circular France. Ha liderat
+            iniciatives de tancament de cicles de materials en grans conglomerats europeus.</div>
+          <div class="participants__card-tema">Xerrada: Tancament de cicles de materials en la indústria europea.</div>
+        </div>
+
+
+
+
+      </section>
+
+
+
+    </main>
+
+
+
+
+
+  </div>
+
+
+  <include src="./views/footer.html"></include>
+
+  <script type="module" src="./assets/scripts/main.js"></script>
+
+</body>
+
 </html>

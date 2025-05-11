@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
@@ -44,9 +45,25 @@
         </div>
       </form>
     </section>
+
+    <!-- Joc -->
+    <section class="memory-game container my-5">
+
+      <div class="text-center my-4">
+        <h2 class="text-center mb-4">Joc de memòria: Relaciona conceptes per veure quant necessites venir a les xerrades
+        </h2>
+        <p>Intents: <span id="attempts">0</span> | Parelles trobades: <span id="pairs">0</span></p>
+        <button id="reset" class="btn btn-primary"><i class="fas fa-sync-alt"></i> Reiniciar joc el joc</button>
+      </div>
+
+      <div class="game-grid"></div>
+
+    </section>
+
   </main>
 
   <include src="./views/footer.html"></include>
   <script type="module" src="./assets/scripts/main.js"></script>
 </body>
+
 </html>

@@ -1,7 +1,7 @@
 @layer pages {
     .contact-header {
-      background: url('../images/contact-header.webp') center/cover no-repeat;
-      height: 60lvh; 
+      background: url("../images/contact-header.webp") center/cover no-repeat;
+      height: 60lvh;
       color: white;
       display: flex;
       align-items: center;
@@ -33,6 +33,55 @@
   
         &:hover {
           background-color: $uoc-masterbrand;
+        }
+      }
+    }
+  
+    .memory-game {
+      text-align: center;
+  
+      .game-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: to-rem(16);
+      }
+  
+      .card {
+        background-color: hwb(240 20% 30%);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: clamp(0.8rem, 2svw, 1rem);
+        width: 10svh;
+        height: 10svh;
+        border-radius: to-rem(12);
+        box-shadow: 0 0 to-rem(4) rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        user-select: none;
+        transition: transform 0.3s ease;
+  
+        &:hover {
+          transform: scale(1.1);
+          background-color: display-p3(0.4 0.6 1);
+        }
+  
+        &.matched {
+          background-color: display-p3(0.2 0.8 0.4);
+          color: #000;
+          cursor: default;
+          pointer-events: none;
+          transform: scale(1);
+        }
+      }
+  
+      
+      @media (max-width: 600px) {
+        .card {
+          font-size: to-rem(14);
+          width: 12svh;
+          height: 12svh;
         }
       }
     }

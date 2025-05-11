@@ -1,39 +1,52 @@
 <!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="./assets/styles/main.scss">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <title>Contacte - Jornades d’Economia Circular</title>
+</head>
 
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<body class="pages">
+  <include src="./views/header.html"></include>
 
+  <main>
+    <!-- Capçalera -->
+    <section class="contact-header d-flex align-items-center justify-content-center text-center text-light">
+      <h1 class="display-4 fw-bold">Contacta amb nosaltres</h1>
+    </section>
 
-    <title>Jornades d’Economia Circular</title>
-  </head>
-  <body class="pages">
-  
-    <include src="./views/header.html"></include>
+    <!-- Formulari Netlify -->
+    <section class="container py-5">
+      <h2 class="text-center mb-4">Envia'ns un missatge</h2>
 
-    <div class="uoc-container">
+      <form name="contact" method="POST" data-netlify="true">
+        <div class="mb-3">
+          <label for="name" class="form-label">Nom</label>
+          <input type="text" class="form-control" id="name" name="name" required>
+        </div>
 
-       
+        <div class="mb-3">
+          <label for="email" class="form-label">Correu electrònic</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
 
-      <main class="poster">
+        <div class="mb-3">
+          <label for="message" class="form-label">Missatge</label>
+          <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+        </div>
 
-  
-      
-      </main>
-  
-  
-  
-  
-  
-    </div>
-    
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">
+            <i class="bi bi-send"></i> Enviar
+          </button>
+        </div>
+      </form>
+    </section>
+  </main>
 
-    <include src="./views/footer.html"></include>
-   
-    <script type="module" src="./assets/scripts/main.js"></script>
-
-  </body>
+  <include src="./views/footer.html"></include>
+  <script type="module" src="./assets/scripts/main.js"></script>
+</body>
 </html>

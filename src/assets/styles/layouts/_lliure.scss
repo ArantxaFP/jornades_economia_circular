@@ -1,0 +1,40 @@
+@layer pages {
+    .contact-header {
+      background: url('../images/contact-header.webp') center/cover no-repeat;
+      height: 60lvh; 
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  
+      @container (max-width: 768px) {
+        height: 40lvh;
+      }
+    }
+  
+    form {
+      background-color: color(display-p3 0.95 0.98 1);
+      padding: to-rem(32);
+      border-radius: to-rem(12);
+      box-shadow: 0 0 to-rem(10) rgba(0, 0, 0, 0.1);
+  
+      @container (max-width: 768px) {
+        padding: to-rem(16);
+      }
+  
+      .form-label {
+        color: $uoc-corporate;
+      }
+  
+      .btn {
+        background-color: $uoc-corporate;
+        border: none;
+  
+        &:hover {
+          background-color: $uoc-masterbrand;
+        }
+      }
+    }
+  }
+  

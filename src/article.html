@@ -1,67 +1,62 @@
 <!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <title>Jornades d’Economia Circular</title>
+</head>
 
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<body class="pages">
+  <include src="./views/header.html"></include>
 
+  <main class="article container">
+    <header class="article__header position-relative vw-100 overflow-hidden d-flex justify-content-center align-items-center mb-4">
+      <img src="./assets/images/article-economia-circular.webp" 
+           alt="Conferència sobre economia circular" 
+           class="article__image position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
+    
+      <div class="article__overlay position-relative bg-primary bg-opacity-75 p-4 rounded shadow text-center">
+        <h1 class="article__title text-light fw-bold mb-2 fs-1">Economia circular: definició, importància i beneficis</h1>
+        <p class="article__author text-light fw-semibold mb-0 fs-6">per Parlament Europeu</p>
+      </div>
+    </header>
+    
 
-    <title>Jornades d’Economia Circular</title>
-  </head>
-  <body class="pages">
+    <section class="article__content">
+      <p>L'economia circular és un model de producció i consum que implica compartir, llogar, reutilitzar, reparar, renovar i reciclar materials i productes existents tantes vegades com sigui possible per crear un valor afegit. D'aquesta manera, s'allarga el cicle de vida dels productes.</p>
 
-    <include src="./views/header.html"></include>
-    <main class="article">
-      <header class="article__header">
-        <img src="./assets/images/article-economia-circular.webp" alt="Conferència sobre economia circular" class="article__image">
-        <div class="article__overlay">
-          <h1 class="article__title">Economia circular: definició, importància i beneficis</h1>
-          <p class="article__author">per Parlament Europeu</p>
+      <div class="article__highlight">
+        <div class="article__highlight-left">
+          <p>L'economia circular és aquella en què el valor dels productes, els materials i els recursos es mantenen a l'economia durant el major temps possible, i en què es redueix al mínim la generació de residus.</p>
         </div>
-      </header>
-      
-    
-      <section class="article__content">
-        <p>L'economia circular és un model de producció i consum que implica compartir, llogar, reutilitzar, reparar, renovar i reciclar materials i productes existents tantes vegades com sigui possible per crear un valor afegit. D'aquesta manera, s'allarga el cicle de vida dels productes.</p>
-    
-        <div class="article__highlight">
-          <div class="article__highlight-left">
-            <p>L'economia circular és aquella en què el valor dels productes, els materials i els recursos es mantenen a l'economia durant el major temps possible, i en què es redueix al mínim la generació de residus.</p>
-          </div>
-          <div class="article__highlight-right">
-            <p>Com amb aquest tipus d'economia es redueix al mínim la generació de residus, constitueix una contribució essencial als esforços de la UE encaminats a assolir una economia sostenible, descarbonitzada, eficient en l'ús dels recursos i competitiva. Es parteix de maximitzar els recursos disponibles, perquè aquests romanguin el major temps possible al cicle productiu. L'economia circular aspira a reduir tant com sigui possible la generació de residus ia aprofitar al màxim aquells la generació dels quals no s'hagi pogut evitar. Això s'aplica tant als cicles biològics com als cicles tecnològics. Així s'extreuen matèries primeres, es fabriquen productes i dels residus generats es recuperen materials i substàncies que posteriorment es reincorporen, de manera segura per a la salut humana i el medi ambient, de nou al procés productiu. En última instància, es tracta de desvincular el creixement econòmic del consum finit de recursos.</p>
-          </div>
+        <div class="article__highlight-right">
+          <p>Com amb aquest tipus d'economia es redueix al mínim la generació de residus, constitueix una contribució essencial als esforços de la UE encaminats a assolir una economia sostenible, descarbonitzada, eficient en l'ús dels recursos i competitiva...</p>
         </div>
+      </div>
 
-        <blockquote>“No existeix sostenibilitat sense una gestió eficient dels recursos.” — Dra. Isabel Moreno</blockquote>
-    
-        <p>Aquest model contrasta amb l'economia lineal tradicional, que es basa en el patró "usar i llençar" i requereix grans quantitats de materials i energia barats i fàcilment accessibles. L'obsolescència programada, contra la qual el Parlament Europeu demana mesures, també forma part d'aquest model.</p>
-    
-        <img src="./assets/images/article-economia-circular.webp" alt="Conferència sobre economia circular">
-    
-        <p>Reutilitzar i reciclar productes ajuda a alentir l'ús de recursos naturals, redueix la disrupció del paisatge i l'hàbitat i ajuda a limitar la pèrdua de biodiversitat. Un altre benefici de l'economia circular és la reducció de les emissions anuals totals de gasos amb efecte d'hivernacle.</p>
-    
-        <img src="./assets/images/businesswoman-economia_circular.webp" alt="Dona entre edifics de negocis pensant en pactes">
-    
-        <p>La transició cap a una economia circular pot generar beneficis ambientals, econòmics i socials, incloent la creació de llocs de treball, la innovació i la competitivitat empresarial.</p>
-    
-        <ul>
-          <li><strong>Reducció de residus:</strong> Clau per a la sostenibilitat.</li>
-          <li><strong>Reutilització:</strong> Allargar la vida útil dels productes.</li>
-          <li><strong>Reciclatge:</strong> Minimitzar l'impacte ambiental.</li>
-        </ul>
-      </section>
-    
-    </main>
-    
-    
+      <blockquote>“No existeix sostenibilitat sense una gestió eficient dels recursos.” — Dra. Isabel Moreno</blockquote>
 
-    <include src="./views/footer.html"></include>
-   
-    <script type="module" src="./assets/scripts/main.js"></script>
+      <p>Aquest model contrasta amb l'economia lineal tradicional, que es basa en el patró "usar i llençar" i requereix grans quantitats de materials i energia barats i fàcilment accessibles.</p>
 
-  </body>
+      <img src="./assets/images/article-economia-circular.webp" alt="Conferència sobre economia circular">
+
+      <p>Reutilitzar i reciclar productes ajuda a alentir l'ús de recursos naturals, redueix la disrupció del paisatge i l'hàbitat i ajuda a limitar la pèrdua de biodiversitat.</p>
+
+      <img src="./assets/images/businesswoman-economia_circular.webp" alt="Dona entre edificis pensant en pactes">
+
+      <p>La transició cap a una economia circular pot generar beneficis ambientals, econòmics i socials, incloent la creació de llocs de treball, la innovació i la competitivitat empresarial.</p>
+
+      <ul>
+        <li><strong>Reducció de residus:</strong> Clau per a la sostenibilitat.</li>
+        <li><strong>Reutilització:</strong> Allargar la vida útil dels productes.</li>
+        <li><strong>Reciclatge:</strong> Minimitzar l'impacte ambiental.</li>
+      </ul>
+    </section>
+  </main>
+
+  <include src="./views/footer.html"></include>
+  <script type="module" src="./assets/scripts/main.js"></script>
+</body>
 </html>
-
